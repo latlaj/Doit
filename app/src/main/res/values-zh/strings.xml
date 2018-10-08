@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">便签</string>
+    <string name="action_settings">设置</string>
+    <string name="default_string">天气不错</string>
+    <string name="empty">这里空空如也</string>
+    <string name="title">标题</string>
+    <string name="dialog_save">保存</string>
+    <string name="dialog_delete">删除此便签</string>
+    <string name="delete_or_not">确认删除？</string>
+    <string name="save_or_not">确认保存？</string>
+    <string name="yes">确认</string>
+    <string name="no">放弃</string>
+    <string name="database_finish">数据库创建成功！</string>
+    <string name="action_delete">删除此便签</string>
+    <string name="title_activity_settings">设定</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">通用</string>
+
+    <string name="pref_title_social_recommendations">退出编辑时弹窗确认</string>
+    <string name="pref_description_social_recommendations">关闭后无须确认，默认保存编辑数据。</string>
+
+    <string name="pref_title_display_name">作者昵称</string>
+    <string name="pref_default_display_name">小明</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">数据同步</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">通知</string>
+
+    <string name="pref_title_new_message_notifications">新消息通知</string>
+
+    <string name="pref_title_ringtone">铃声</string>
+    <string name="pref_ringtone_silent">静音</string>
+
+    <string name="pref_title_vibrate">振动</string>
+    <string name="pref_new_dialog_display_key">switch_dialog</string>
+    <string name="date_format">yyyy年MM月dd日 HH:mm:ss</string>
+    <string name="new_note_title">新建</string>
+</resources>
