@@ -1,4 +1,4 @@
-package com.example.a64929.mynote;
+package team.tts.doit;
 
 import org.junit.Test;
 

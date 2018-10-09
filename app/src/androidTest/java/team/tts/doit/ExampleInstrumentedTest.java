@@ -1,4 +1,4 @@
-package com.example.a64929.mynote;
+package team.tts.doit;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

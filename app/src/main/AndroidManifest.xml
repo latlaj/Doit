@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.a64929.mynote">
+    package="team.tts.doit">
 
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
-        android:name=".Data"
+        android:name="team.tts.doit.Data"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -13,26 +13,26 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="team.tts.doit.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".NewNoteActivity"
+            android:name="team.tts.doit.NewNoteActivity"
             android:label="@string/new_note_title"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="team.tts.doit.MainActivity"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".SettingsActivity"
+            android:name="team.tts.doit.SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName="team.tts.doit.MainActivity" />
         <activity
-            android:name=".DialogActivity"
+            android:name="team.tts.doit.DialogActivity"
             android:theme="@style/Theme.AppCompat.Dialog"/>
     </application>
 

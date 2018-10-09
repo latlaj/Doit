@@ -1,6 +1,5 @@
-package com.example.a64929.mynote;
+package team.tts.doit;
 
-import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;

@@ -1,4 +1,4 @@
-package com.example.a64929.mynote;
+package team.tts.doit;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

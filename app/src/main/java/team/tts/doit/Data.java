@@ -1,6 +1,5 @@
-package com.example.a64929.mynote;
+package team.tts.doit;
 
-import android.annotation.SuppressLint;
 import android.app.Application;
 import android.content.Context;
 
