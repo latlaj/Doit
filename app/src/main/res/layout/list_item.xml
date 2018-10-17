@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<team.tts.doit.CheckableLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,8 +16,7 @@
             android:layout_toStartOf="@id/ItemTime"
             android:textSize="20sp"
             android:ellipsize="end"
-            android:singleLine="true"
-            />
+            android:singleLine="true" />
         <TextView
             android:id="@+id/ItemTime"
             android:layout_width="wrap_content"
@@ -24,8 +24,7 @@
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:textSize="15sp"
-            android:ellipsize="end"
-            />
+            android:ellipsize="end" />
     </RelativeLayout>
     <TextView
         android:id="@+id/ItemText"
@@ -33,6 +32,5 @@
         android:layout_width="wrap_content"
         android:textSize="15sp"
         android:ellipsize="end"
-        android:maxLines="2"
-        />
-</LinearLayout>
+        android:maxLines="2" />
+</team.tts.doit.CheckableLinearLayout>

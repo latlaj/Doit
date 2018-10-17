@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">便签</string>
+    <string name="app_name">Doit</string>
     <string name="action_settings">设置</string>
+    <string name="action_edit">编辑</string>
     <string name="default_string">天气不错</string>
     <string name="empty">这里空空如也</string>
     <string name="title">标题</string>
@@ -86,4 +87,7 @@
     <string name="pref_new_dialog_display_key">switch_dialog</string>
     <string name="date_format">yyyy年MM月dd日 HH:mm:ss</string>
     <string name="new_note_title">新建</string>
+    <string name="navigation_drawer_open">打开抽屉</string>
+    <string name="navigation_drawer_close">关闭抽屉</string>
+    <string name="action_menu_delete">删除</string>
 </resources>
