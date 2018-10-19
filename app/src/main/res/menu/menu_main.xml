@@ -3,11 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="team.tts.doit.MainActivity">
     <item
-        android:id="@+id/action_menu_delete"
-        android:title="@string/action_menu_delete"
-        app:showAsAction="ifRoom"
-        android:visible="false"/>
-    <item
         android:id="@+id/action_edit"
         android:title="@string/action_edit"
         app:showAsAction="ifRoom" />

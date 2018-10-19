@@ -90,4 +90,8 @@
     <string name="navigation_drawer_open">打开抽屉</string>
     <string name="navigation_drawer_close">关闭抽屉</string>
     <string name="action_menu_delete">删除</string>
+    <string name="action_menu_choose">全选</string>
+    <string name="action_title_sub1">已选</string>
+    <string name="action_title_sub2">项</string>
+    <string name="action_title_sub3">项</string>
 </resources>

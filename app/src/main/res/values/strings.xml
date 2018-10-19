@@ -3,6 +3,10 @@
     <string name="action_settings">Settings</string>
     <string name="action_edit">edit</string>
     <string name="action_menu_delete">delete</string>
+    <string name="action_menu_choose">choose</string>
+    <string name="action_title_sub1">selected</string>
+    <string name="action_title_sub2">item</string>
+    <string name="action_title_sub3">items</string>
     <string name="default_string">Hello World</string>
     <string name="empty">Have no note</string>
     <string name="title">Title</string>
