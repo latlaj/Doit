@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
-        android:name="team.tts.doit.Data"
+        android:name=".Data"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -13,27 +13,40 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="team.tts.doit.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="team.tts.doit.NewNoteActivity"
+            android:name=".NewNoteActivity"
             android:label="@string/new_note_title"
-            android:parentActivityName="team.tts.doit.MainActivity"
+            android:parentActivityName=".MainActivity"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="team.tts.doit.SettingsActivity"
+            android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:parentActivityName="team.tts.doit.MainActivity" />
+            android:parentActivityName=".MainActivity" />
         <activity
-            android:name="team.tts.doit.DialogActivity"
-            android:theme="@style/Theme.AppCompat.Dialog"/>
+            android:name=".DialogActivity"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+
+        <service
+            android:name=".QuickSettingService"
+            android:icon="@drawable/ic_event_add"
+            android:label="@string/quick_settings_tile"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".TimerAddActivity"></activity>
     </application>
 
 </manifest>

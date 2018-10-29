@@ -151,12 +151,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             return true;
         }
         if(id==R.id.action_edit){
-
+            if(list.size()>0){
+                listView.setItemChecked(0,true);
+                listView.clearChoices();
+            }
+            app.addNotification("快速添加事件");
         }
-        if(id==android.R.id.home){
-
-        }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -218,7 +218,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     public void onClick(DialogInterface dialogInterface, int i) {
                         deleteNote(view_ids);
                         listView.clearChoices();
-                        mainListViewModeListener.finsh();
+                        mainListViewModeListener.finish();
                     }
                 })
                 .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
@@ -334,7 +334,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
             return s0+" "+s1+" "+s2;
         }
-        public void finsh(){
+        public void finish(){
             actionMode.setSubtitle(getSubtitle());
             if(list.size()==0)actionMode.finish();
         }

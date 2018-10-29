@@ -94,4 +94,7 @@
     <string name="action_title_sub1">已选</string>
     <string name="action_title_sub2">项</string>
     <string name="action_title_sub3">项</string>
+    <string name="quick_settings_tile">快捷添加事件</string>
+    <string name="pref_title_new_message_notifications_key">notifications_new_message</string>
+    <string name="timer_button">添加提醒</string>
 </resources>

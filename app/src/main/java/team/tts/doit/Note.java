@@ -4,6 +4,7 @@ public class Note {
     private String title="Title";
     private String time="1998";
     private String content="Hello World";
+    private String timerID="0";
     public boolean b=false;
     private int id=0;
     public Note(int id,String title,String content){

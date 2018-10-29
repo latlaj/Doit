@@ -2,6 +2,7 @@ package team.tts.doit;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
@@ -11,6 +12,7 @@ import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
+import android.preference.SwitchPreference;
 import android.support.v7.app.ActionBar;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
@@ -76,7 +78,17 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                     }
                 }
 
-            } else {
+            }else if(preference instanceof SwitchPreference){
+                Context context=Data.getAppContext();
+                String s=context.getString(R.string.pref_title_new_message_notifications);
+                if(preference.getTitle()==s){
+                    SharedPreferences sharedPref= PreferenceManager.getDefaultSharedPreferences(context);
+                    boolean notification_switch=sharedPref.getBoolean(context.getString(R.string.pref_title_new_message_notifications),false);
+                    if(notification_switch){
+
+                    }
+                }
+            }else {
                 // For all other preferences, set the summary to the value's
                 // simple string representation.
                 preference.setSummary(stringValue);
