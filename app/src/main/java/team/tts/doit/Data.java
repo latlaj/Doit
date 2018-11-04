@@ -24,6 +24,7 @@ public class Data extends Application {
     public void onCreate() {
         context=this;
         dbHelper=new MyDatabaseHelper(this,database_name,table,null,1);
+        dbHelper_timer=new MyDatabaseHelper(this,database_name,table_timer,null,1);
         super.onCreate();
     }
 
@@ -35,6 +36,7 @@ public class Data extends Application {
      * 表名
      */
     private String table="notes";
+    private  String table_timer="timer";
 
     private static Context context;
 
@@ -43,9 +45,12 @@ public class Data extends Application {
     }
 
     private MyDatabaseHelper dbHelper;
+    private MyDatabaseHelper dbHelper_timer;
 
-    public MyDatabaseHelper getDbHelper() {
-        return dbHelper;
+    //public MyDatabaseHelper getDbHelper() { return dbHelper; }
+    public MyDatabaseHelper getDbHelper(String table) {
+        if(table.equals(this.table))return dbHelper;
+        return dbHelper_timer;
     }
 
     public static Context getAppContext() {

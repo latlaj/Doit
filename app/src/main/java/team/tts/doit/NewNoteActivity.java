@@ -12,7 +12,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.EditText;
 
 /**
@@ -34,17 +36,15 @@ public class NewNoteActivity extends AppCompatActivity {
         Intent intent=getIntent();
         hc=intent.getBooleanExtra("have_content",false);
         if(hc){
-            int id=intent.getIntExtra("note_id",1);
+            note_id=intent.getIntExtra("note_id",1);
             view_id=intent.getIntExtra("view_id",0);
-            note_id=id;
-            display(id);
+            display(note_id);
             EditText et = (EditText)findViewById(R.id.editText2);
             et.requestFocus();
             et.setSelection(et.getText().length());
         }else{
             noteTime=System.currentTimeMillis();
         }
-
     }
 
     @Override
@@ -137,7 +137,7 @@ public class NewNoteActivity extends AppCompatActivity {
         intent.putExtra("title", title);
         intent.putExtra("content", content);
         if (hc) {
-            MyDatabaseHelper.update(note_id,title,content);
+            MyDatabaseHelper.update("notes",note_id,title,content);
             intent.putExtra("view_id",view_id);
             intent.putExtra("id",note_id);
         }else {
@@ -152,7 +152,7 @@ public class NewNoteActivity extends AppCompatActivity {
 
     private void display(int id){
         String ID=String.valueOf(id);
-        Cursor cursor=MyDatabaseHelper.select(ID);
+        Cursor cursor=MyDatabaseHelper.select("notes",ID);
         String title=cursor.getString(cursor.getColumnIndex("title"));
         noteTime=cursor.getLong(cursor.getColumnIndex("time"));
         String content=cursor.getString(cursor.getColumnIndex("content"));
@@ -160,5 +160,11 @@ public class NewNoteActivity extends AppCompatActivity {
         title0.setText(title);
         EditText content0=(EditText)findViewById(R.id.editText2);
         content0.setText(content);
+    }
+
+    public void startTimerActivity(View v){
+        Intent intent=new Intent(this,TimerAddActivity.class);
+        intent.putExtra("note_id",note_id);
+        startActivity(intent);
     }
 }

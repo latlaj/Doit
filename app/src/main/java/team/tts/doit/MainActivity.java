@@ -94,11 +94,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         */
         mainListViewModeListener=new MainListViewModeListener();
         listView.setMultiChoiceModeListener(mainListViewModeListener);
-        Cursor c = MyDatabaseHelper.check();
+        Cursor c = MyDatabaseHelper.check("notes");
         if (c.getCount() != 0) {
             String[] strings={"id", "title", "time", "content"};
             String order="id";
-            Cursor cursor = MyDatabaseHelper.check(strings,order);
+            Cursor cursor = MyDatabaseHelper.check("notes",strings,order);
             SimpleDateFormat sdFormatter = new SimpleDateFormat(getString(R.string.date_format));
             while (cursor.moveToNext()) {
                 String title = cursor.getString(cursor.getColumnIndex("title"));
@@ -232,7 +232,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private void deleteNote(int view_id) {
         String ID=String.valueOf(list.get(view_id).getId());
-        MyDatabaseHelper.delete_id(ID);
+        MyDatabaseHelper.delete_id("notes",ID);
         list.remove(view_id);
         lva.notifyDataSetChanged();
         if (list.size() == 0) {
@@ -245,7 +245,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int l=view_ids.size();
         for(int i=l-1;i>-1;--i){
             String ID=String.valueOf(list.get(view_ids.get(i)).getId());
-            MyDatabaseHelper.delete_id(ID);
+            MyDatabaseHelper.delete_id("notes",ID);
             list.remove((int)view_ids.get(i));
         }
         lva.notifyDataSetChanged();
